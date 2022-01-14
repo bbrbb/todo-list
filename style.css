@@ -1,0 +1,116 @@
+* {
+  font-family: "Hi Melody", cursive;
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  background-color: rgba(247, 243, 242, 0.7);
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  max-width: 800px;
+  border-top: 10px solid rgba(0, 0, 0, 0.527);
+  border-bottom: 10px solid rgba(0, 0, 0, 0.527);
+}
+.task-area {
+  border: 1px solid black;
+  margin-top: 1em;
+  position: relative;
+}
+.task-tabs {
+  display: flex;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+.task-tabs div {
+  padding: 1.2em;
+  cursor: pointer;
+}
+
+#under-line {
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  width: 70px;
+  left: 0px;
+  top: 60px;
+  padding: 0px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+.task span {
+  padding: 0.8em;
+}
+
+.task-done {
+  text-decoration: line-through;
+}
+
+.task-tabs div {
+  cursor: pointer;
+}
+
+#task-input {
+  width: 200px;
+  text-align: center;
+}
+#add-button {
+  border-radius: 25px;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-color: rgba(92, 18, 8, 0.568);
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+}
+#add-button:hover {
+  background-color: rgba(54, 10, 10, 0.452);
+}
+
+.fa-check {
+  color: rgb(4, 172, 4);
+  font-size: 14px;
+}
+
+.fa-trash-alt {
+  color: rgb(250, 32, 3);
+  font-size: 14px;
+}
+
+.button-box {
+  display: flex;
+}
+
+.button-box button {
+  height: 100%;
+  border: none;
+  width: 5em;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.5s;
+}
+.button-box button :active {
+  position: relative;
+  top: 2px;
+}
+
+.button-box button:first-child:hover {
+  background-color: rgba(77, 124, 7, 0.507);
+}
+.button-box button:nth-child(2):hover {
+  background-color: rgb(255, 0, 0, 0.3);
+}
