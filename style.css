@@ -1,12 +1,11 @@
-* {
-  font-family: "Hi Melody", cursive;
-  font-weight: 700;
-}
 body {
   margin: 0;
   background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  font-family: "Hi Melody", cursive;
+  font-weight: 900;
 }
 
 .container {
@@ -19,6 +18,11 @@ body {
   border-top: 10px solid rgba(0, 0, 0, 0.527);
   border-bottom: 10px solid rgba(0, 0, 0, 0.527);
 }
+
+.input-area {
+  position: relative;
+}
+
 .task-area {
   border: 1px solid black;
   margin-top: 1em;
@@ -30,7 +34,7 @@ body {
   position: relative;
 }
 .task-tabs div {
-  padding: 1.2em;
+  padding: 1em;
   cursor: pointer;
 }
 
@@ -38,9 +42,9 @@ body {
   height: 3px;
   background-color: black;
   position: absolute;
-  width: 70px;
+  width: 55px;
   left: 0px;
-  top: 60px;
+  top: 55px;
   padding: 0px;
 }
 
@@ -59,6 +63,8 @@ body {
 
 .task-done {
   text-decoration: line-through;
+  background-color: rgba(92, 18, 8, 0.568);
+  transition: 0.5s;
 }
 
 .task-tabs div {
@@ -90,7 +96,10 @@ body {
   color: rgb(250, 32, 3);
   font-size: 14px;
 }
-
+.fa-undo-alt {
+  color: rgba(145, 171, 197, 0.863);
+  font-size: 14px;
+}
 .button-box {
   display: flex;
 }

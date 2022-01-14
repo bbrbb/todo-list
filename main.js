@@ -5,12 +5,19 @@ let tabs = document.querySelectorAll(".task-tabs div")
 let taskList=[];
 let mode ="all";
 let filterList=[];
+
 addButton.addEventListener("click", addTask);
+taskInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+      addTask(event);
+    }
+  });
 
 for(let i=1;i<tabs.length;i++){
     tabs[i].addEventListener("click", function(event){filter(event)})
 }
 console.log(tabs);
+
 function addTask() {
        let task ={
         id:randomIDGenerate(),
@@ -18,27 +25,30 @@ function addTask() {
         isComplete:false,
     };
     taskList.push(task);
-    console.log(taskList);
+    taskInput.value="";
     render();
 }
 
 function render(){
+    let resultHTML = "";
     let list =[];
     if(mode =="all"){
         list = taskList;
     }else if(mode =="ongoing"|| mode =="done") {
         list = filterList;
     }
-    let resultHTML = "";
+
+
+
     for(let i=0; i<list.length; i++){
         if(list[i].isComplete == true){
-            resultHTML+=`<div class="task">
-            <span class ="task-done">${list[i].taskContent}</span>
+            resultHTML+=`<div class="task task-done">
+            <span>${list[i].taskContent}</span>
             <div class ="button-box">
-                <button onclick="toggleComplete('${list[i].id}')"><i class="fas fa-check"></i></button>
+                <button onclick="toggleComplete('${list[i].id}')"><i class="fas fa-undo-alt"></i></button>
                 <button onclick="deleteTask('${list[i].id}')"><i class="fas fa-trash-alt"></i></button>
             </div>
-        </div>`
+        </div>`;
         }else{ resultHTML +=`<div class="task">
         <span>${list[i].taskContent}</span>
         <div class ="button-box">
@@ -55,7 +65,7 @@ function render(){
 
 function toggleComplete(id) {
    console.log("id:",id);
-   for(let i=0;i<taskList.length;i++){
+   for(let i=0; i<taskList.length; i++){
        if(taskList[i].id == id){
            taskList[i].isComplete = !taskList[i].isComplete;
            break;
@@ -64,6 +74,7 @@ function toggleComplete(id) {
    render();
    console.log(taskList); 
 }
+
 
 function deleteTask(id){
     for(let i=0;i<taskList.length;i++){
