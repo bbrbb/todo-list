@@ -4,12 +4,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: "Hi Melody", cursive;
-  font-weight: 900;
+  font-family: "Ubuntu", sans-serif;
 }
 
 .container {
-  background-color: rgba(247, 243, 242, 0.7);
+  background-color: rgba(247, 243, 242, 0.904);
   min-height: 100vh;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -17,6 +16,7 @@ body {
   max-width: 800px;
   border-top: 10px solid rgba(0, 0, 0, 0.527);
   border-bottom: 10px solid rgba(0, 0, 0, 0.527);
+  padding-top: 5px;
 }
 
 .input-area {
@@ -25,7 +25,7 @@ body {
 
 .task-area {
   border: 1px solid black;
-  margin-top: 1em;
+  margin-top: 0.8em;
   position: relative;
 }
 .task-tabs {
@@ -34,7 +34,7 @@ body {
   position: relative;
 }
 .task-tabs div {
-  padding: 1em;
+  padding: 0.8em;
   cursor: pointer;
 }
 
@@ -44,7 +44,7 @@ body {
   position: absolute;
   width: 55px;
   left: 0px;
-  top: 55px;
+  top: 50px;
   padding: 0px;
 }
 
@@ -63,7 +63,7 @@ body {
 
 .task-done {
   text-decoration: line-through;
-  background-color: rgba(92, 18, 8, 0.568);
+  background-color: rgba(92, 18, 8, 0.404);
   transition: 0.5s;
 }
 
